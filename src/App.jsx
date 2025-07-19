@@ -1,15 +1,14 @@
-import {Header, } from "./components/index";
+import {Header, Home} from "./components/index";
 
 
 function App() {
 
   return (
     <>
+      <Header/>
       <main>
-        <Header/>
-        <div className="container">
-          <h1>REACT</h1>
-        </div>
+        <Home/>
+
       </main>
 
     </>
