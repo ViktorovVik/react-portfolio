@@ -1,8 +1,8 @@
 import {Navigation} from "../index.js";
 import { FaXing } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
-import './Header.css';
 import {useState} from "react";
+import './Header.css';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,16 +11,20 @@ const Header = () => {
     setIsOpen(!isOpen)
   }
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <header className="header">
       <div className="container">
         <div className="header-wrapper">
           <a
-            href=""
+            href="#"
             className="logo"
           >Viktor
           </a>
-            <Navigation isOpen={isOpen}/>
+            <Navigation isOpen={isOpen} onLinkClick={closeMenu}/>
           <div className="nav-menu-btn" onClick={toggleMenu}>
             {isOpen ? <FaXing/> : <FaBarsStaggered/>}
           </div>
