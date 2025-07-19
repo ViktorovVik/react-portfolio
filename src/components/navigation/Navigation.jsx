@@ -1,52 +1,20 @@
+import { Link } from 'react-scroll';
 import './Navigation.css'
 
-const Navigation = () => {
+const Navigation = ({isOpen}) => {
+  const liItems = ["home", "about", "skills", "services", "portfolio"];
+
   return (
-    <nav className="nav">
-      <ul className="nav-menu">
-        <li className="nav-item">
-          <a
-            href="#home"
-            className="nav-link active"
-          >home
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            href="#about"
-            className="nav-link"
-          >About
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            href="#skills"
-            className="nav-link"
-          >Skills
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            href="#services"
-            className="nav-link"
-          >Services
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            href="#portfolio"
-            className="nav-link"
-          >Portfolio
-          </a>
-        </li>
-        <li className="nav-item">
-          <a
-            href="#contact"
-            className="nav-link"
-          >Contact
-          </a>
-        </li>
-      </ul>
+    <nav className={isOpen ? "nav active" : "nav"}>
+      <div className={isOpen ? "nav-menu active" : "nav-menu"}>
+        {liItems.map((li, index) => (
+          <Link
+            to={`#${li}`}
+            key={index}
+            className="nav-link">{li}
+          </Link>
+        ))}
+      </div>
     </nav>
   );
 };
