@@ -1,6 +1,5 @@
 .home {
-  padding: 80px 0;
-  min-height: 100vh;
+  padding-top: 80px;
 }
 
 .home-wrapper {
@@ -8,6 +7,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 60px;
+  margin-bottom: 60px;
 }
 
 .media-icons {
@@ -106,7 +106,6 @@
     transform: translateY(10px);
   }
 }
-
 
 @keyframes arrow-wiggle {
   0%   { transform: translateX(0.5px); }
