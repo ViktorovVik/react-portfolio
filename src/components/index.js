@@ -3,7 +3,7 @@ export {default as Navigation} from "./navigation/Navigation";
 export {default as Footer} from "./footer/Footer";
 export {default as Home} from "./Home/Home";
 export {default as About} from "./about/About";
-export {default as Skills} from "./skills/Skills";
+export {default as Skills} from "./skills/Skillsinfo.jsx";
 export {default as Contact} from "./contact/Contact";
 export {default as Clients} from "./clients/Clients";
 export {default as Services} from "./services/Services";

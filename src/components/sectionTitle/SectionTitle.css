@@ -15,16 +15,6 @@
   transform: translateY(-55px);
 }
 
-.inner-second-title::before {
-  content: "";
-  position: absolute;
-  width: 70px;
-  height: 5px;
-  right: 27px;
-  bottom: 0;
-  background: var(--second-color);
-}
-
 
 @media (max-width: 480px) {
   .inner-title {
